@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventZ - Create Event</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dark.css" id="theme" disabled>
+</head>
+<body>
+  <nav><!-- Same as index.html --></nav>
+  <main>
+    <h1>Create Event</h1>
+    <form id="create-event-form">
+      <input type="text" id="title" placeholder="Event Title" required>
+      <textarea id="description" placeholder="Description"></textarea>
+      <input type="datetime-local" id="date-time" required>
+      <input type="text" id="location" placeholder="Location" required>
+      <select id="category" required>
+        <option value="Gaming">🎮 Gaming</option>
+        <option value="Chill Hangout">🛋️ Chill Hangout</option>
+        <option value="Pop-Up Shop">🛍️ Pop-Up Shop</option>
+        <option value="Party">🎉 Party</option>
+        <option value="Study">🎓 Study</option>
+      </select>
+      <input type="file" id="image" accept="image/*">
+      <button type="submit">Create</button>
+    </form>
+  </main>
+  <script src="/js/events.js"></script>
+  <script>
+    document.getElementById('create-event-form').addEventListener('submit', createEvent);
+    applyTheme();
+  </script>
+</body>
+</html>

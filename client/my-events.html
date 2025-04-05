@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventZ - My Events</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dark.css" id="theme" disabled>
+</head>
+<body>
+  <nav><!-- Same as index.html --></nav>
+  <main>
+    <h1>My Events</h1>
+    <h2>Created</h2>
+    <div id="created-events"></div>
+    <h2>RSVP’d</h2>
+    <div id="rsvpd-events"></div>
+  </main>
+  <script src="/js/events.js"></script>
+  <script>
+    fetchUserEvents();
+    fetchRSVPEvents();
+    applyTheme();
+  </script>
+</body>
+</html>

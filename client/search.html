@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventZ - Search</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dark.css" id="theme" disabled>
+</head>
+<body>
+  <nav><!-- Same as index.html --></nav>
+  <main>
+    <h1>Search Events</h1>
+    <input type="text" id="search-query" placeholder="Search by title, location, or keyword">
+    <div id="search-results"></div>
+  </main>
+  <script src="/js/search.js"></script>
+  <script>
+    document.getElementById('search-query').addEventListener('input', searchEvents);
+    applyTheme();
+  </script>
+</body>
+</html>

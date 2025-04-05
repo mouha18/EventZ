@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventZ - Profile</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dark.css" id="theme" disabled>
+</head>
+<body>
+  <nav><!-- Same as index.html --></nav>
+  <main>
+    <h1>My Profile</h1>
+    <img id="profile-pic" src="" alt="Profile Picture">
+    <form id="profile-form">
+      <input type="text" id="username" placeholder="Username" disabled>
+      <input type="file" id="profile-pic-upload" accept="image/*">
+      <button type="submit">Update Picture</button>
+    </form>
+    <h2>My Events</h2>
+    <div id="user-events"></div>
+  </main>
+  <script src="/js/auth.js"></script>
+  <script src="/js/events.js"></script>
+  <script>
+    loadProfile();
+    fetchUserEvents();
+    document.getElementById('profile-form').addEventListener('submit', updateProfilePic);
+    applyTheme();
+  </script>
+</body>
+</html>

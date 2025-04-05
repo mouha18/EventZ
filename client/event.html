@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventZ - Event Details</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dark.css" id="theme" disabled>
+</head>
+<body>
+  <nav><!-- Same as index.html --></nav>
+  <main>
+    <h1 id="event-title"></h1>
+    <img id="event-image" src="" alt="Event Flyer">
+    <p id="event-date-time"></p>
+    <p id="event-location"></p>
+    <p id="event-category"></p>
+    <p id="event-description"></p>
+    <button id="rsvp-btn">RSVP</button>
+    <button id="bookmark-btn">Bookmark</button>
+    <h2>Comments</h2>
+    <form id="comment-form">
+      <textarea id="comment-content" placeholder="Add a comment" maxlength="500" required></textarea>
+      <button type="submit">Post</button>
+    </form>
+    <div id="comments"></div>
+  </main>
+  <script src="/js/events.js"></script>
+  <script>
+    loadEventDetails();
+    document.getElementById('rsvp-btn').addEventListener('click', toggleRSVP);
+    document.getElementById('bookmark-btn').addEventListener('click', toggleBookmark);
+    document.getElementById('comment-form').addEventListener('submit', postComment);
+    setInterval(loadComments, 5000); // Real-time comment updates every 5s
+    applyTheme();
+  </script>
+</body>
+</html>
